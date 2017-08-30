@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="1" type="collection">
+        <element label="new field 2" max_length="40" name="new_field_2" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Legal" label="Requested Type" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element label="Human Resource" sequence="0" value="Human Resource"/>
+                <element label="Legal" sequence="1" value="Legal"/>
+                <element label="Facilities" sequence="2" value="Facilities"/>
+                <element label="Service Desk" sequence="3" value="Service Desk"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Legal 1" label="What Needed" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element label="Human Resouce1" sequence="0" value="Human Resouce1"/>
+                <element label="Human Resource2" sequence="1" value="Human Resource2"/>
+                <element label="Legal 1" sequence="2" value="Legal 1"/>
+                <element label="Legal 2" sequence="3" value="Legal 2"/>
+                <element label="Facilities 1" sequence="4" value="Facilities 1"/>
+                <element label="Facilities 2" sequence="5" value="Facilities 2"/>
+                <element label="Service Desk1" sequence="6" value="Service Desk1"/>
+                <element label="Service Desk 2" sequence="7" value="Service Desk 2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Requested" label="State" mandatory="true" max_length="40" name="u_choice_6" type="string">
+            <choice>
+                <element label="Requested" sequence="0" value="Requested"/>
+                <element label="Awaiting Approval" sequence="1" value="Awaiting Approval"/>
+                <element label="Approved" sequence="2" value="Approved"/>
+                <element label="Awaiting Feedback" sequence="3" value="Awaiting Feedback"/>
+                <element label="Withdrawn" sequence="4" value="Withdrawn"/>
+            </choice>
+        </element>
+        <element label="When Needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element label="Requested For" mandatory="true" max_length="32" name="u_reference_2" reference="sys_user" type="reference"/>
+    </element>
+</database>
